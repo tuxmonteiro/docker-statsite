@@ -2,6 +2,7 @@
 echo "Running with Params $@"
 
 dockerize -template /conf/influxdb.ini.tmpl:/conf/influxdb.ini \
-          -template /conf/statsite.conf.tmpl:/conf/statsite.conf \
-                    /bin/statsite -f /conf/statsite.conf  "$@" 
+          -template /conf/statsite.conf.tmpl:/conf/statsite.conf
+          
+/bin/statsite -f /conf/statsite.conf "$@" 
 
