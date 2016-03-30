@@ -26,6 +26,7 @@ RUN mkdir /code && \
     make &&\
     mv ./src/statsite /bin/statsite &&\
     mv /code/statsite/sinks /bin/sinks &&\
+    chmod +x /bin/sinks/* &&\
     rm -rf /code
 
 COPY conf /conf
