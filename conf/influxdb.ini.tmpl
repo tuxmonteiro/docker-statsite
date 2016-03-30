@@ -1,0 +1,6 @@
+[influxdb]
+host = {{ default .Env.INFLUXDB_HOST "localhost" }}
+port = {{ default .Env.INFLUXDB_PORT "8086" }}
+database = {{ default .Env.INFLUXDB_DB "statsite" }}
+username = {{ default .Env.INFLUXDB_USERNAME "root" }}
+password = {{ default .Env.INFLUXDB_PASSWORD "root" }}

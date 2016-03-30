@@ -1,0 +1,9 @@
+[statsite]
+port = {{ default .Env.STATSITE_PORT "8215" }}
+udp_port = {{ default .Env.STATSITE_PORT "8215" }}
+log_level = {{ default .Env.STATSITE_LOG_LEVEL "WARN" }}
+log_facility = {{ default .Env.STATSITE_LOG_FACILITY "local0" }}
+flush_interval =  {{ default .Env.STATSITE_FLUSH_INTERVAL "10" }}
+timer_eps = {{ default .Env.STATSITE_TIMER_EPS "0.01" }}
+set_eps = {{ default .Env.STATSITE_SET_EPS "0.02" }}
+stream_cmd = {{ default .Env.STREAM_CMD "/bin/sinks/dual-sink" }}
