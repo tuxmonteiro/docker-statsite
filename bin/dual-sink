@@ -1,6 +1,6 @@
 #! /bin/bash
 # Sink to send metrics to graphite and influxdb
 while read line; do
-  echo $line | python /bin/sinks/influxdb.py /conf/influxdb.ini INFO
+  echo $line | python /bin/sinks/influxdb.py /conf/influxdb.ini WARN
   echo $line | python /bin/sinks/graphite.py $GRAPHITE_HOST $GRAPHITE_PORT
 done < /dev/stdin
