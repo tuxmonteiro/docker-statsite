@@ -1,4 +1,3 @@
-node {
-    echo 'Hello from Pipeline'
+run_and_alert {
+  quay()
 }
-
