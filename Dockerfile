@@ -1,4 +1,4 @@
-FROM debian:8.3
+FROM phusion/baseimage
 
 RUN apt-get update && apt-get install -y \
     git \
@@ -8,6 +8,9 @@ RUN apt-get update && apt-get install -y \
     autoconf \
     python \
     curl \
+    libtool \
+    check \
+    pkg-config \
     && rm -rf /var/lib/apt/lists/*
 
 ENV dockerize_version=0.2.0
@@ -24,7 +27,7 @@ RUN mkdir /code && \
     ./autogen.sh &&\
     ./configure &&\
     make &&\
-    mv ./src/statsite /bin/statsite &&\
+    mv ./statsite /bin/statsite &&\
     mv /code/statsite/sinks /bin/sinks &&\
     chmod +x /bin/sinks/* &&\
     rm -rf /code
