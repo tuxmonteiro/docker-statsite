@@ -19,9 +19,9 @@ RUN \
 
 RUN mkdir /code && \
     cd /code && \
-    git clone  https://github.com/armon/statsite.git &&\
+    git clone  https://github.com/statsite/statsite.git &&\
     cd /code/statsite &&\
-    ./bootstrap.sh &&\ 
+    ./autogen.sh &&\
     ./configure &&\
     make &&\
     mv ./src/statsite /bin/statsite &&\
