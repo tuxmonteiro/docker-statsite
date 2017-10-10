@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y \
     libtool \
     check \
     pkg-config \
+    nodejs \
     && rm -rf /var/lib/apt/lists/*
 
 ENV dockerize_version=0.2.0
